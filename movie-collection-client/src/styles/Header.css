@@ -1,0 +1,152 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background-color: rgba(16, 17, 20, 0.92);
+  backdrop-filter: blur(14px);
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1180px;
+  min-height: 78px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logo-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(245, 197, 66, 0.28);
+  border-radius: 12px;
+  background-color: rgba(245, 197, 66, 0.1);
+  font-size: 1.4rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo-title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.logo-subtitle {
+  color: #777b84;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px;
+  border: 1px solid #292b31;
+  border-radius: 12px;
+  background-color: #18191e;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  color: #a7a9b0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+  background-color: #24262c;
+  color: #ffffff;
+}
+
+.nav-link-active {
+  background-color: #f5c542;
+  color: #151515;
+  box-shadow: 0 8px 20px rgba(245, 197, 66, 0.18);
+}
+
+.nav-link-active:hover {
+  background-color: #ffd85c;
+  color: #151515;
+}
+
+@media (max-width: 700px) {
+  .header-container {
+    min-height: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .navigation {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-link {
+    flex: 1;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .header-container {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .logo-subtitle {
+    display: none;
+  }
+
+  .navigation {
+    gap: 4px;
+  }
+
+  .nav-link {
+    font-size: 0.82rem;
+  }
+}
